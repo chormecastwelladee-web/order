@@ -26,8 +26,10 @@
     <div class="bg-white rounded-2xl shadow-xl w-11/12 max-w-lg flex flex-col md:flex-row items-center md:items-start p-6 space-y-4 md:space-y-0 md:space-x-5">
       
       <!-- โลโก้ -->
-      <img src="Logo_Welladee-01.jpg" alt="Welladee Logo" class="w-28 md:w-32 rounded-xl shadow-sm">
-
+      <div class="flex flex-col items-center md:items-start">
+      <img src="Logo_Welladee-01.jpg" alt="Welladee Logo" class="w-28 md:w-32 rounded-xl shadow-sm mb-2">
+      
+    </div>
       <!-- เนื้อหาข้อความ -->
       <div class="flex-1 text-center md:text-left">
         <h2 class="text-xl font-semibold text-gray-800 mb-2" id="popup-title">แจ้งบริการ</h2>
@@ -65,9 +67,9 @@
       canEnter = false;
     } else {
       message.innerHTML = `
-        🍳 <b>อาหารเช้า</b> สั่งได้ตั้งแต่ <b>07:00 - 10:00 น.</b><br>
-        🛎️ <b>Room Service</b> เปิดให้บริการตั้งแต่ <b>09:00 น.</b><br><br>
-        กรุณากด “ตกลง” เพื่อเข้าสู่หน้าเมนู
+        
+        🛎️ <b>Room Service</b> เปิดให้บริการตั้งแต่ <b>09:00 น. ขออภัยในความไม่สะดวก</b><br><br>
+        กรุณากด “ตกลง” เพื่อเข้าสู่หน้าเมนูสั่งอาหาร
       `;
       canEnter = true;
     }
