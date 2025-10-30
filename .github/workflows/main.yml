@@ -26,8 +26,10 @@
     <div class="bg-white rounded-2xl shadow-xl w-11/12 max-w-lg flex flex-col md:flex-row items-center md:items-start p-6 space-y-4 md:space-y-0 md:space-x-5">
       
       <!-- โลโก้ -->
-      <img src="Logo_Welladee-01.jpg" alt="Welladee Logo" class="w-28 md:w-32 rounded-xl shadow-sm">
-
+      <div class="flex flex-col items-center md:items-start">
+      <img src="Logo_Welladee-01.jpg" alt="Welladee Logo" class="w-28 md:w-32 rounded-xl shadow-sm mb-2">
+      
+    </div>
       <!-- เนื้อหาข้อความ -->
       <div class="flex-1 text-center md:text-left">
         <h2 class="text-xl font-semibold text-gray-800 mb-2" id="popup-title">แจ้งบริการ</h2>
@@ -51,26 +53,16 @@
     const hours = now.getHours();
 
     // 👉 เปลี่ยน URL ที่ต้องการให้ไปต่อ
-    const nextPageUrl = "https://docs.google.com/forms/d/e/1FAIpQLSdDbLjrvNeQtIlb5bIyMsSLGd3xe6eU13K18EElS4dRrQcb3w/viewform"; 
+    const nextPageUrl = "https://www.welladee.com/assets/uploads/kcfinder/files/Menu-Wella-Da-Cafe.pdf"; 
 
-    let canEnter = false;
-
-    if (hours < 7) {
+    
       message.innerHTML = `
-        <span class="text-red-500 font-semibold text-lg">ขออภัยค่ะ</span><br>
-        ระบบสั่งอาหารเปิดให้บริการตั้งแต่เวลา <b>07:00 น.</b> เป็นต้นไป<br>
-        กรุณาสแกนใหม่อีกครั้งหลังเวลา 07:00 น.
-      `;
-      okBtn.textContent = "ปิดหน้านี้";
-      canEnter = false;
-    } else {
-      message.innerHTML = `
-        🍳 <b>อาหารเช้า</b> สั่งได้ตั้งแต่ <b>07:00 - 10:00 น.</b><br>
-        🛎️ <b>Room Service</b> เปิดให้บริการตั้งแต่ <b>09:00 น.</b><br><br>
-        กรุณากด “ตกลง” เพื่อเข้าสู่หน้าเมนู
+        
+        🛎️ <b>Room Service</b>  เปิดให้บริการตั้งแต่ ช่วงเวลา 9.00 น. เป็นต้นไป </b><br><br>
+        กรุณากด “ตกลง” เพื่อเข้าสู่หน้าเมนูอาหาร
       `;
       canEnter = true;
-    }
+    
 
     okBtn.addEventListener("click", () => {
       if (canEnter) {
