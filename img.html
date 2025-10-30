@@ -16,16 +16,23 @@
       scroll-snap-type: x mandatory;
       scroll-behavior: smooth;
       -webkit-overflow-scrolling: touch;
+      padding: 10px;
     }
     .slide {
       flex: 0 0 80%;
       scroll-snap-align: center;
       margin: 0 10px;
       position: relative;
+      transition: transform 0.3s ease;
+    }
+    .slide:hover {
+      transform: scale(1.03);
     }
     .slide img {
       width: 100%;
+      height: auto;
       border-radius: 20px;
+      object-fit: cover;
       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
     .slide-title {
@@ -39,48 +46,40 @@
       font-size: 1.2rem;
       text-shadow: 0 2px 5px rgba(0,0,0,0.6);
     }
+
+    /* ✅ Responsive */
+    @media (max-width: 768px) {
+      .slide {
+        flex: 0 0 90%;
+      }
+    }
+    @media (max-width: 480px) {
+      .slide {
+        flex: 0 0 95%;
+      }
+      .slide-title {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen">
 
-  <h1 class="text-2xl font-semibold text-gray-800 mb-6">🍽️ เลือกดูเมนูอาหาร</h1>
+  <h1 class="text-2xl font-semibold text-gray-800 mb-4 text-center">🍽️ เลือกดูเมนูอาหาร</h1>
 
-  <div class="slider w-full max-w-lg">
-    <div class="slide">
-      <img src="appetizer.jpg" alt="Appetizer">
-      <div class="slide-title">Appetizer</div>
-    </div>
-    <div class="slide">
-      <img src="toast.jpg" alt="Toast">
-      <div class="slide-title">Toast</div>
-    </div>
-    <div class="slide">
-      <img src="toast1.jpg" alt="Toast">
-      <div class="slide-title">Toast Set</div>
-    </div>
-    <div class="slide">
-      <img src="pancake.jpg" alt="Pancake">
-      <div class="slide-title">Pancake</div>
-    </div>
-    <div class="slide">
-      <img src="pasta1.jpg" alt="Pasta">
-      <div class="slide-title">Pasta</div>
-    </div>
-    <div class="slide">
-      <img src="comfortingfood.jpg" alt="Comforting Food">
-      <div class="slide-title">Comforting Food</div>
-    </div>
-    <div class="slide">
-      <img src="comfortingfood1.jpg" alt="Comforting Food">
-      <div class="slide-title">Comforting Food 2</div>
-    </div>
-    <div class="slide">
-      <img src="sarad.jpg" alt="Salad">
-      <div class="slide-title">Salad</div>
-    </div>
-  </div>
+  <div class="slider w-full max-w-5xl">
+  <div class="slide"><img src="appetizer.jpg" alt="Appetizer"></div>
+  <div class="slide"><img src="toast.jpg" alt="Toast"></div>
+  <div class="slide"><img src="toast1.jpg" alt="Toast"></div>
+  <div class="slide"><img src="pancake.jpg" alt="Pancake"></div>
+  <div class="slide"><img src="pasta1.jpg" alt="Pasta"></div>
+  <div class="slide"><img src="comfortingfood.jpg" alt="Comforting Food"></div>
+  <div class="slide"><img src="comfortingfood1.jpg" alt="Comforting Food"></div>
+  <div class="slide"><img src="sarad.jpg" alt="Salad"></div>
+</div>
 
-  <p class="mt-6 text-gray-600">ปัดซ้ายหรือขวาเพื่อดูเมนูทั้งหมด 👈👉</p>
+
+  <p class="mt-4 text-gray-600 text-sm md:text-base">ปัดซ้ายหรือขวาเพื่อดูเมนูทั้งหมด 👈👉</p>
 
 </body>
 </html>
