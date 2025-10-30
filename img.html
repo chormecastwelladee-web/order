@@ -18,6 +18,7 @@
     color: #5c4033;
   }
 
+ 
   .slider {
     position: relative;
     max-width: 700px;
@@ -25,21 +26,13 @@
     overflow: hidden;
     border-radius: 20px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    margin-bottom: 50px; /* เพิ่มช่องว่างไม่ให้ปุ่มบังข้อความ */
   }
-
-  .slide {
-    display: none;
-  }
-
   .slide img {
     width: 100%;
+    display: block;
     border-radius: 20px;
   }
-
-  .active {
-    display: block;
-  }
-
   .nav-btn {
     position: absolute;
     top: 50%;
@@ -50,13 +43,10 @@
     padding: 8px 12px;
     cursor: pointer;
     border-radius: 50%;
+    z-index: 10;
   }
-  .prev { left: 10px; }
-  .next { right: 10px; }
-
-  .nav-btn:hover {
-    background-color: rgba(255,255,255,0.9);
-  }
+  .nav-btn.prev { left: -50px; } /* ออกนอกภาพ */
+  .nav-btn.next { right: -50px; }
 </style>
 </head>
 <body>
@@ -68,7 +58,7 @@
   <div class="slide"><img src="toast.jpg" alt="Toast"></div>
   <div class="slide"><img src="toast1.jpg" alt="Toast"></div>
   <div class="slide"><img src="pancake.jpg" alt="Pancake"></div>
-  <div class="slide"><img src="pasta1.jpg" alt="Pasta"></div>
+  <div class="slide"><img src="pasta.jpg" alt="Pasta"></div>
   <div class="slide"><img src="comfortingfood.jpg" alt="Comforting Food"></div>
   <div class="slide"><img src="comfortingfood1.jpg" alt="Comforting Food"></div>
   <div class="slide"><img src="sarad.jpg" alt="Salad"></div>
@@ -76,7 +66,7 @@
   <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
   <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
 </div>
-  
+
 <script>
 let currentSlide = 0;
 const slides = document.querySelectorAll(".slide");
@@ -99,5 +89,3 @@ function changeSlide(n) {
 
 </body>
 </html>
-
-
