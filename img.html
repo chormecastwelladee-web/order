@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เลือกดูเมนูอาหาร</title>
+<style>
+  body {
+    font-family: "Prompt", sans-serif;
+    background-color: #fff8f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    margin: 20px;
+    color: #5c4033;
+  }
+
+  .slider {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+  }
+
+  .slide {
+    display: none;
+  }
+
+  .slide img {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .active {
+    display: block;
+  }
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.7);
+    border: none;
+    font-size: 24px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  .nav-btn:hover {
+    background-color: rgba(255,255,255,0.9);
+  }
+</style>
+</head>
+<body>
+
+<h1>🍽️ เลือกดูเมนูอาหาร</h1>
+
+<div class="slider">
+  <div class="slide active"><img src="appetizer.jpg" alt="Appetizer"></div>
+  <div class="slide"><img src="toast.jpg" alt="Toast"></div>
+  <div class="slide"><img src="toast1.jpg" alt="Toast"></div>
+  <div class="slide"><img src="pancake.jpg" alt="Pancake"></div>
+  <div class="slide"><img src="pasta.jpg" alt="Pasta"></div>
+  <div class="slide"><img src="comfortingfood.jpg" alt="Comforting Food"></div>
+  <div class="slide"><img src="comfortingfood1.jpg" alt="Comforting Food"></div>
+  <div class="slide"><img src="sarad.jpg" alt="Salad"></div>
+
+  <button class="nav-btn prev" onclick="changeSlide(-1)">&#10094;</button>
+  <button class="nav-btn next" onclick="changeSlide(1)">&#10095;</button>
+</div>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll(".slide");
+
+function showSlide(index) {
+  slides.forEach(slide => slide.classList.remove("active"));
+  if (index >= slides.length) currentSlide = 0;
+  if (index < 0) currentSlide = slides.length - 1;
+  slides[currentSlide].classList.add("active");
+}
+
+function changeSlide(n) {
+  currentSlide += n;
+  showSlide(currentSlide);
+}
+
+// auto-slide ทุก 3 วินาที
+
+</script>
+
+</body>
+</html>
