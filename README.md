@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
@@ -57,12 +58,12 @@
 
     // ข้อความที่จะแสดงใน popup
     message.innerHTML = `
-      🛎️ <b>Room Service</b> เปิดให้บริการตั้งแต่เวลา 9.00 น. เป็นต้นไป<br><br>
-      กรุณากด “ตกลง” เพื่อเข้าสู่หน้าเมนูอาหาร
+      🛎️ <b>Room Service</b> เปิดให้บริการตั้งแต่เวลา 9.00 - 17:30 น.<br><br>
+      กด “ตกลง” เพื่อเข้าสู่หน้าเมนูอาหาร
     `;
 
     // เมื่อกดปุ่ม "ตกลง"
-    okBtn.addEventListener("click", () => {
+    okBtn.addEventListener("click", () =>7 {
       if (canEnter) {
         window.location.href = nextPageUrl;
       } else {
@@ -73,3 +74,5 @@
 
 </body>
 </html>
+
+
