@@ -58,7 +58,7 @@
 
     // ข้อความที่จะแสดงใน popup
     message.innerHTML = `
-      🛎️ <b>Room Service</b> เปิดให้บริการตั้งแต่เวลา 9.00 - 17:30 น., Room Service is available from 9:00 AM to 5:30 PM.<br><br>
+      🛎️ <b>Room Service เปิดให้บริการตั้งแต่เวลา 9.00 - 17:30 น.</b>, Room Service is available from 9:00 AM to 5:30 PM.<br><br>
       
       กรุณากด “ตกลง” เพื่อเข้าสู่หน้าเมนูอาหาร 
 Please click "OK" to access the menu page.
