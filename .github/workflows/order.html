@@ -57,7 +57,7 @@
 
     // ข้อความที่จะแสดงใน popup
     message.innerHTML = `
-      🛎️ <b>Room Service เปิดให้บริการตั้งแต่เวลา 9.00 - 17:30 น.</b>, Room Service is available from 9:00 AM to 5:30 PM.<br><br>
+      🛎️ <b>Room Service เปิดให้บริการตั้งแต่เวลา 9.00 - 16:00 น.</b>, Room Service is available from 9:00 AM to 4:00 PM.<br><br>
       
       กรุณากด “ตกลง” เพื่อเข้าสู่หน้าเมนูอาหาร 
 Please click "OK" to access the menu page.
@@ -68,7 +68,7 @@ Please click "OK" to access the menu page.
       if (canEnter) {
         window.location.href = nextPageUrl;
       } else {
-        alert("กรุณากลับมาใหม่หลังเวลา 07:00 น.");
+        alert("ขณะนี้ร้านอาหารเช้า & Room Service ปิดให้บริการแล้วกรุณากลับมาใหม่หลังเวลา 09:00 น.");
       }
     });
   </script>
